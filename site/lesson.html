@@ -8,8 +8,8 @@
   <meta name="description" content="AI Engineering from Scratch - Lesson Viewer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260417e">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260424a">
   <style>
     .scroll-progress {
       position: fixed;
@@ -63,41 +63,60 @@
 
     .lesson-sidebar-toggle:hover {
       border-color: var(--accent);
+      background: var(--bg-surface-hover);
+      transform: translateY(-2px);
+    }
+
+    .lesson-sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .lesson-sidebar::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 10px;
     }
 
     .sidebar-phase-header {
-      padding: 8px 20px;
+      padding: 16px 20px 8px;
       font-family: var(--font-heading);
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1.5px;
+      opacity: 0.8;
     }
 
     .sidebar-lesson-link {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 20px;
+      gap: 12px;
+      padding: 10px 20px;
       font-family: var(--font-body);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       text-decoration: none;
-      transition: background-color 0.15s, color 0.15s;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       border-left: 3px solid transparent;
+      margin: 2px 0;
     }
 
     .sidebar-lesson-link:hover {
-      background: var(--bg-surface-hover);
+      background: rgba(255, 255, 255, 0.03);
       color: var(--text);
+      padding-left: 24px;
+    }
+
+    [data-theme="light"] .sidebar-lesson-link:hover {
+      background: rgba(0, 0, 0, 0.03);
     }
 
     .sidebar-lesson-link.active {
       color: var(--accent);
-      background: rgba(255, 107, 107, 0.08);
+      background: rgba(255, 107, 107, 0.06);
       border-left-color: var(--accent);
-      font-weight: 700;
+      font-weight: 600;
+      padding-left: 24px;
     }
 
     .sidebar-lesson-dot {
@@ -263,6 +282,12 @@
       color: var(--text);
       margin-top: 32px;
       margin-bottom: 12px;
+    }
+
+    .lesson-article h1,
+    .lesson-article h2,
+    .lesson-article h3 {
+      scroll-margin-top: var(--header-offset, 92px);
     }
 
     .lesson-article p {
@@ -712,6 +737,125 @@
       margin: 24px 0;
       display: flex;
       justify-content: center;
+    }
+
+    .mermaid-block {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .mermaid-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .mermaid-btn {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      cursor: pointer;
+      transition: border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+    }
+
+    .mermaid-btn:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .mermaid-btn:active {
+      transform: scale(0.98);
+    }
+
+    .mermaid-render {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .mermaid-source {
+      display: none;
+    }
+
+    .mermaid-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--overlay-bg);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .mermaid-modal-overlay.open {
+      display: flex;
+    }
+
+    .mermaid-modal {
+      width: min(1100px, 96vw);
+      height: min(760px, 88vh);
+      background: var(--modal-bg);
+      border: 2px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow-hard-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .mermaid-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-surface);
+    }
+
+    .mermaid-modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .mermaid-modal-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .mermaid-modal-body {
+      flex: 1;
+      overflow: auto;
+      padding: 18px;
+      background: var(--bg);
+    }
+
+    .mermaid-modal-center {
+      min-height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mermaid-modal-body svg {
+      max-width: none;
+      height: auto;
     }
 
     .lesson-article .mermaid-container pre {
@@ -1568,6 +1712,125 @@
       }
     }
 
+    .toc-sidebar {
+      position: fixed;
+      top: 64px;
+      right: 0;
+      bottom: 0;
+      width: 260px;
+      background: transparent;
+      overflow-y: auto;
+      z-index: 40;
+      padding: 48px 24px 80px;
+      display: none;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+
+    .toc-sidebar[aria-hidden="true"] {
+      display: none !important;
+    }
+
+    .toc-sidebar::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    .toc-sidebar::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 10px;
+    }
+
+    .toc-header {
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      opacity: 0.6;
+    }
+
+    .toc-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      position: relative;
+      border-left: 1px solid var(--border);
+    }
+
+    .toc-item {
+      line-height: 1.4;
+    }
+
+    .toc-h2 {
+      margin-top: 2px;
+    }
+
+    .toc-h3 {
+      /* Nested styling handled by indent/font-size */
+    }
+
+    .toc-link {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: block;
+      border-left: 2px solid transparent;
+      padding: 6px 16px;
+      margin-left: -1px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .toc-h3 .toc-link {
+      padding-left: 28px;
+      font-size: 0.78rem;
+    }
+
+    .toc-link:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .toc-link:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 8px;
+    }
+
+    [data-theme="light"] .toc-link:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .toc-link.active {
+      color: var(--accent);
+      border-left-color: var(--accent);
+      font-weight: 600;
+      background: rgba(255, 107, 107, 0.06);
+    }
+
+    @media (min-width: 1280px) {
+      .lesson-main {
+        padding-right: 260px;
+      }
+      .toc-sidebar {
+        display: block;
+      }
+    }
+
+    @media (max-width: 1279px) {
+      .lesson-main {
+        padding-right: 32px;
+      }
+    }
+
     @media (min-width: 1440px) {
       .lesson-article {
         max-width: 800px;
@@ -1580,6 +1843,11 @@
 
       .lesson-main {
         margin-left: 300px;
+        padding-right: 320px;
+      }
+
+      .toc-sidebar {
+        width: 300px;
       }
     }
   </style>
@@ -1612,6 +1880,18 @@
 
   <button class="lesson-sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">&#9776;</button>
 
+  <div class="mermaid-modal-overlay" id="mermaidModalOverlay" aria-hidden="true">
+    <div class="mermaid-modal" role="dialog" aria-modal="true" aria-label="Expanded diagram">
+      <div class="mermaid-modal-header">
+        <div class="mermaid-modal-title" id="mermaidModalTitle">Diagram</div>
+        <div class="mermaid-modal-actions">
+          <button class="mermaid-btn" type="button" id="mermaidModalClose">Close</button>
+        </div>
+      </div>
+      <div class="mermaid-modal-body" id="mermaidModalBody"><div class="mermaid-modal-center" id="mermaidModalCenter"></div></div>
+    </div>
+  </div>
+
   <div class="lesson-layout">
     <aside class="lesson-sidebar" id="lessonSidebar"></aside>
     <main class="lesson-main">
@@ -1622,11 +1902,12 @@
         </div>
       </div>
     </main>
+    <aside class="toc-sidebar" id="tocSidebar" aria-hidden="true"></aside>
   </div>
 
-  <script src="data.js?v=20260417e"></script>
-  <script src="progress.js?v=20260417e"></script>
-  <script src="header.js?v=20260417e" defer></script>
+  <script src="data.js?v=20260424a"></script>
+  <script src="progress.js?v=20260424a"></script>
+  <script src="header.js?v=20260424a" defer></script>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({
@@ -1662,6 +1943,7 @@
           root.setAttribute('data-theme', next);
           localStorage.setItem('theme', next);
           updateThemeIcon();
+          updateMermaidThemeAndRerender();
         });
       }
 
@@ -1858,9 +2140,11 @@
         initCodeCopy();
         renderMermaidBlocks();
         renderAIPanels();
+        buildTOC();
 
         document.querySelectorAll('a[href^="#"]').forEach(function (link) {
           link.addEventListener('click', function (e) {
+            if (link.classList && link.classList.contains('toc-link')) return;
             var target = document.querySelector(link.getAttribute('href'));
             if (target) {
               e.preventDefault();
@@ -1868,6 +2152,198 @@
             }
           });
         });
+      }
+
+      function buildTOC() {
+        var sidebar = document.getElementById('tocSidebar');
+        if (!sidebar) return;
+
+        var article = document.querySelector('.lesson-article');
+        if (!article) {
+          sidebar.innerHTML = '';
+          sidebar.setAttribute('aria-hidden', 'true');
+          return;
+        }
+
+        var headings = article.querySelectorAll('h2, h3');
+        if (!headings.length) {
+          sidebar.innerHTML = '';
+          sidebar.setAttribute('aria-hidden', 'true');
+          return;
+        }
+
+        var used = Object.create(null);
+
+        function ensureHeadingId(heading, idx) {
+          if (!heading) return '';
+
+          var base = '';
+          if (heading.id) {
+            base = heading.id;
+          } else if (typeof slugify === 'function') {
+            base = slugify(heading.textContent || '');
+          } else {
+            base = String(heading.textContent || '').toLowerCase().trim().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+          }
+          if (!base) base = 'section-' + String(idx + 1);
+
+          var candidate = base;
+          var n = 2;
+
+          while (used[candidate] || (document.getElementById(candidate) && document.getElementById(candidate) !== heading)) {
+            candidate = base + '-' + n;
+            n++;
+          }
+          
+          used[candidate] = true;
+          heading.id = candidate;
+          return candidate;
+        }
+
+        var html = '<div class="toc-header">On this page</div>';
+        html += '<nav aria-label="On this page"><ul class="toc-nav">';
+        for (var i = 0; i < headings.length; i++) {
+          var heading = headings[i];
+          var level = heading.tagName.toLowerCase();
+          var id = ensureHeadingId(heading, i);
+          if (!id) continue;
+          var fullText = (heading.textContent || '').trim();
+          var text = fullText.replace(/^[^\p{L}\p{N}]+/u, '').trim();
+          if (!text) continue;
+          html += '<li class="toc-item toc-' + level + '"><a href="#' + id + '" class="toc-link" data-toc-id="' + id + '" title="' + escapeHtml(fullText) + '">' + escapeHtml(text) + '</a></li>';
+        }
+        html += '</ul></nav>';
+        sidebar.innerHTML = html;
+        sidebar.removeAttribute('aria-hidden');
+
+        sidebar.querySelectorAll('.toc-link').forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            var href = a.getAttribute('href');
+            if (!href || href.charAt(0) !== '#') return;
+            var id = href.slice(1);
+            var target = document.getElementById(id);
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', '#' + id);
+            if (!target.hasAttribute('tabindex')) {
+              target.setAttribute('tabindex', '-1');
+              target.addEventListener('blur', function blurHandler() {
+                target.removeAttribute('tabindex');
+                target.removeEventListener('blur', blurHandler);
+              });
+            }
+            target.focus({ preventScroll: true });
+          });
+        });
+
+        initScrollspy(headings, sidebar);
+      }
+
+      function initScrollspy(headings, sidebar) {
+        sidebar = sidebar || document.getElementById('tocSidebar');
+        if (!sidebar) return;
+
+        var links = sidebar.querySelectorAll('.toc-link');
+        if (!links.length || !headings || !headings.length) return;
+
+        var headerOffsetStr = getComputedStyle(document.documentElement).getPropertyValue('--header-offset').trim();
+        var headerOffset = parseInt(headerOffsetStr, 10) || 92;
+
+        if (sidebar._tocObserver && sidebar._tocObserver.disconnect) {
+          sidebar._tocObserver.disconnect();
+          sidebar._tocObserver = null;
+        }
+        if (sidebar._tocScrollHandler) {
+          window.removeEventListener('scroll', sidebar._tocScrollHandler);
+          sidebar._tocScrollHandler = null;
+        }
+        if (sidebar._tocResizeHandler) {
+          window.removeEventListener('resize', sidebar._tocResizeHandler);
+          sidebar._tocResizeHandler = null;
+        }
+
+        function setActive(id) {
+          if (!id || sidebar._tocActiveId === id) return;
+          sidebar._tocActiveId = id;
+
+          links.forEach(function (link) {
+            var href = link.getAttribute('href');
+            var match = href && href.charAt(0) === '#' ? href.slice(1) : '';
+            if (match === id) link.classList.add('active');
+            else link.classList.remove('active');
+          });
+
+          var activeLink = sidebar.querySelector('.toc-link.active');
+          if (activeLink) {
+            var linkTop = activeLink.offsetTop;
+            var sidebarHeight = sidebar.clientHeight;
+            var sidebarScroll = sidebar.scrollTop;
+            if (linkTop < sidebarScroll + 50 || linkTop > sidebarScroll + sidebarHeight - 100) {
+              sidebar.scrollTo({ top: Math.max(0, linkTop - sidebarHeight / 3), behavior: 'smooth' });
+            }
+          }
+        }
+
+        function fallbackByScroll() {
+          var y = (window.scrollY || document.documentElement.scrollTop || 0) + headerOffset + 18;
+          var active = '';
+          for (var i = 0; i < headings.length; i++) {
+            var h = headings[i];
+            if (!h || !h.id) continue;
+            var top = h.getBoundingClientRect().top + window.scrollY;
+            if (top <= y) active = h.id;
+            else break;
+          }
+          if (!active && headings[0] && headings[0].id) active = headings[0].id;
+          if (active) setActive(active);
+        }
+
+        if (typeof IntersectionObserver !== 'undefined') {
+          var marginOffset = headerOffset - 4;
+          var obs = new IntersectionObserver(function (entries) {
+            var best = null;
+            for (var i = 0; i < entries.length; i++) {
+              var e = entries[i];
+              if (!e.isIntersecting) continue;
+              if (!best) best = e;
+              else if (e.boundingClientRect.top < best.boundingClientRect.top) best = e;
+            }
+            if (best && best.target && best.target.id) setActive(best.target.id);
+          }, {
+            root: null,
+            threshold: [0.01, 0.1],
+            rootMargin: '-' + marginOffset + 'px 0px -70% 0px'
+          });
+
+          Array.from(headings).forEach(function (h) {
+            if (h && h.id) obs.observe(h);
+          });
+          sidebar._tocObserver = obs;
+
+          var initial = (location.hash && location.hash.charAt(0) === '#') ? location.hash.slice(1) : '';
+          if (initial && document.getElementById(initial)) setActive(initial);
+          else if (headings[0] && headings[0].id) setActive(headings[0].id);
+
+          return;
+        }
+
+        sidebar._tocScrollHandler = function () {
+          if (window._tocTicking) return;
+          window._tocTicking = true;
+          window.requestAnimationFrame(function () {
+            fallbackByScroll();
+            window._tocTicking = false;
+          });
+        };
+        window.addEventListener('scroll', sidebar._tocScrollHandler, { passive: true });
+
+        sidebar._tocResizeHandler = function () {
+          fallbackByScroll();
+        };
+        window.addEventListener('resize', sidebar._tocResizeHandler);
+
+        fallbackByScroll();
       }
 
       function extractTitle(md) {
@@ -1967,7 +2443,15 @@
               var raw = codeLines.join('\n');
               if (codeLang === 'mermaid') {
                 mermaidBlocks++;
-                out += '<div class="mermaid-container"><pre class="mermaid" id="mermaid-' + mermaidBlocks + '">' + escapeHtml(raw) + '</pre></div>';
+                out += '<div class="mermaid-container">';
+                out += '<div class="mermaid-block" data-mermaid-index="' + mermaidBlocks + '">';
+                out += '<div class="mermaid-toolbar">';
+                out += '<button type="button" class="mermaid-btn mermaid-expand" data-mermaid-index="' + mermaidBlocks + '">Expand</button>';
+                out += '</div>';
+                out += '<pre class="mermaid mermaid-source" id="mermaid-' + mermaidBlocks + '">' + escapeHtml(raw) + '</pre>';
+                out += '<div class="mermaid-render" id="mermaid-render-' + mermaidBlocks + '"></div>';
+                out += '</div>';
+                out += '</div>';
               } else {
                 out += renderCodeBlock(raw, codeLang);
               }
@@ -2216,18 +2700,175 @@
         var check = setInterval(function () {
           if (!window._mermaidReady) return;
           clearInterval(check);
-          var blocks = document.querySelectorAll('.mermaid');
-          blocks.forEach(function (block) {
-            var id = block.id;
-            var def = block.textContent;
-            window._mermaidReady.render(id + '-svg', def).then(function (result) {
-              block.innerHTML = result.svg;
-            }).catch(function () {
-              block.innerHTML = '<p style="color:var(--text-muted);font-style:italic;">Diagram could not be rendered.</p>';
-            });
-          });
+          rerenderMermaidBlocks();
+          bindMermaidToolbar();
+          initMermaidModal();
         }, 100);
         setTimeout(function () { clearInterval(check); }, 10000);
+      }
+
+      function mermaidTheme() {
+        return document.documentElement.getAttribute('data-theme') === 'light' ? 'default' : 'dark';
+      }
+
+      function updateMermaidThemeAndRerender() {
+        if (!window._mermaidReady) return;
+        try {
+          window._mermaidReady.initialize({ startOnLoad: false, theme: mermaidTheme(), fontFamily: 'Patrick Hand, cursive' });
+        } catch (_) {}
+        rerenderMermaidBlocks();
+        rerenderMermaidModal();
+      }
+
+      function rerenderMermaidBlocks() {
+        if (!window._mermaidReady) return;
+        var sources = document.querySelectorAll('pre.mermaid.mermaid-source');
+        sources.forEach(function (pre) {
+          var idxMatch = pre.id && pre.id.match(/mermaid-(\d+)/);
+          var idx = idxMatch ? idxMatch[1] : null;
+          if (!idx) return;
+          var target = document.getElementById('mermaid-render-' + idx);
+          if (!target) return;
+          var def = pre.textContent;
+          target.innerHTML = '<div class="panel-loading">Rendering diagram...</div>';
+
+          var token = ++mermaidRenderSeq;
+          target._mermaidRenderToken = token;
+
+          window._mermaidReady.render('mermaid-' + idx + '-svg', def).then(function (result) {
+            if (target._mermaidRenderToken !== token) return;
+            target.innerHTML = result.svg;
+          }).catch(function () {
+            if (target._mermaidRenderToken !== token) return;
+            target.innerHTML = '<p style="color:var(--text-muted);font-style:italic;">Diagram could not be rendered.</p>';
+          });
+        });
+      }
+
+      function bindMermaidToolbar() {
+        document.querySelectorAll('.mermaid-expand').forEach(function (btn) {
+          if (btn._bound) return;
+          btn._bound = true;
+          btn.addEventListener('click', function () {
+            var idx = btn.getAttribute('data-mermaid-index');
+            openMermaidModal(idx, btn);
+          });
+        });
+      }
+
+      function initMermaidModal() {
+        var overlay = document.getElementById('mermaidModalOverlay');
+        var closeBtn = document.getElementById('mermaidModalClose');
+        if (!overlay || !closeBtn) return;
+        if (overlay._bound) return;
+        overlay._bound = true;
+
+        closeBtn.addEventListener('click', closeMermaidModal);
+        overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) closeMermaidModal();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (!overlay.classList.contains('open')) return;
+          if (e.key === 'Escape') {
+            e.preventDefault();
+            closeMermaidModal();
+            return;
+          }
+
+          if (e.key === 'Tab') {
+            var focusables = getMermaidModalFocusables();
+            if (!focusables.length) return;
+            var first = focusables[0];
+            var last = focusables[focusables.length - 1];
+            var active = document.activeElement;
+
+            if (e.shiftKey) {
+              if (active === first || active === overlay) {
+                e.preventDefault();
+                last.focus();
+              }
+            } else {
+              if (active === last) {
+                e.preventDefault();
+                first.focus();
+              }
+            }
+          }
+        });
+      }
+
+      var lastMermaidTrigger = null;
+      var openMermaidIndex = null;
+      var mermaidRenderSeq = 0;
+
+      function getMermaidModalFocusables() {
+        var modal = document.querySelector('#mermaidModalOverlay .mermaid-modal');
+        if (!modal) return [];
+        return Array.prototype.slice.call(modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+          .filter(function (el) { return !el.disabled && el.offsetParent !== null; });
+      }
+
+      function openMermaidModal(idx, triggerEl) {
+        var overlay = document.getElementById('mermaidModalOverlay');
+        var body = document.getElementById('mermaidModalBody');
+        var center = document.getElementById('mermaidModalCenter');
+        var title = document.getElementById('mermaidModalTitle');
+        var closeBtn = document.getElementById('mermaidModalClose');
+        var pre = document.getElementById('mermaid-' + idx);
+        if (!overlay || !body || !center || !pre || !closeBtn) return;
+
+        lastMermaidTrigger = triggerEl || document.activeElement;
+        openMermaidIndex = idx;
+
+        if (title) title.textContent = 'Diagram';
+
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        closeBtn.focus();
+
+        rerenderMermaidModal();
+      }
+
+      function rerenderMermaidModal() {
+        var overlay = document.getElementById('mermaidModalOverlay');
+        var center = document.getElementById('mermaidModalCenter');
+        if (!overlay || !center) return;
+        if (!overlay.classList.contains('open')) return;
+        if (!openMermaidIndex) return;
+        if (!window._mermaidReady) return;
+
+        var pre = document.getElementById('mermaid-' + openMermaidIndex);
+        if (!pre) return;
+        var def = pre.textContent;
+
+        center.innerHTML = '<div class="panel-loading">Rendering diagram...</div>';
+        var token = ++mermaidRenderSeq;
+        center._mermaidRenderToken = token;
+
+        window._mermaidReady.render('mermaid-modal-svg', def).then(function (result) {
+          if (center._mermaidRenderToken !== token) return;
+          center.innerHTML = result.svg;
+        }).catch(function () {
+          if (center._mermaidRenderToken !== token) return;
+          center.innerHTML = '<p style="color:var(--text-muted);font-style:italic;">Diagram could not be rendered.</p>';
+        });
+      }
+
+      function closeMermaidModal() {
+        var overlay = document.getElementById('mermaidModalOverlay');
+        var center = document.getElementById('mermaidModalCenter');
+        if (!overlay) return;
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        if (center) center.innerHTML = '';
+        document.body.style.overflow = '';
+        openMermaidIndex = null;
+
+        if (lastMermaidTrigger && typeof lastMermaidTrigger.focus === 'function') {
+          lastMermaidTrigger.focus();
+        }
       }
 
       function renderQuiz(data) {
