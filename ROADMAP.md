@@ -6,90 +6,90 @@ Progress tracking for every phase and lesson.
 
 **Legend:** ✅ Complete | 🚧 In Progress | ⬚ Planned
 
-## Phase 0: Setup & Tooling — ✅ (~14 hours)
+## Phase 0: Setup & Tooling — 🚧 (~14 hours)
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | Dev Environment | ✅ | ~75 min |
-| 02 | Git & Collaboration | ✅ | ~45 min |
-| 03 | GPU Setup & Cloud | ✅ | ~75 min |
-| 04 | APIs & Keys | ✅ | ~75 min |
-| 05 | Jupyter Notebooks | ✅ | ~75 min |
-| 06 | Python Environments | ✅ | ~75 min |
-| 07 | Docker for AI | ✅ | ~75 min |
-| 08 | Editor Setup | ✅ | ~75 min |
-| 09 | Data Management | ✅ | ~75 min |
-| 10 | Terminal & Shell | ✅ | ~45 min |
-| 11 | Linux for AI | ✅ | ~45 min |
-| 12 | Debugging & Profiling | ✅ | ~75 min |
+| 01 | Dev Environment | 🚧 | ~75 min |
+| 02 | Git & Collaboration | 🚧 | ~45 min |
+| 03 | GPU Setup & Cloud | 🚧 | ~75 min |
+| 04 | APIs & Keys | 🚧 | ~75 min |
+| 05 | Jupyter Notebooks | 🚧 | ~75 min |
+| 06 | Python Environments | 🚧 | ~75 min |
+| 07 | Docker for AI | 🚧 | ~75 min |
+| 08 | Editor Setup | 🚧 | ~75 min |
+| 09 | Data Management | 🚧 | ~75 min |
+| 10 | Terminal & Shell | 🚧 | ~45 min |
+| 11 | Linux for AI | 🚧 | ~45 min |
+| 12 | Debugging & Profiling | 🚧 | ~75 min |
 
-## Phase 1: Math Foundations — ✅ (~23 hours)
-
-| # | Lesson | Status | Est. |
-|---|--------|--------|------|
-| 01 | Linear Algebra Intuition | ✅ | ~45 min |
-| 02 | Vectors, Matrices & Operations | ✅ | ~75 min |
-| 03 | Matrix Transformations & Eigenvalues | ✅ | ~75 min |
-| 04 | Calculus for ML — Derivatives & Gradients | ✅ | ~45 min |
-| 05 | Chain Rule & Automatic Differentiation | ✅ | ~75 min |
-| 06 | Probability & Distributions | ✅ | ~45 min |
-| 07 | Bayes' Theorem & Statistical Thinking | ✅ | ~75 min |
-| 08 | Optimization — Gradient Descent Family | ✅ | ~75 min |
-| 09 | Information Theory — Entropy, KL Divergence | ✅ | ~45 min |
-| 10 | Dimensionality Reduction — PCA, t-SNE, UMAP | ✅ | ~75 min |
-| 11 | Singular Value Decomposition | ✅ | ~75 min |
-| 12 | Tensor Operations | ✅ | ~75 min |
-| 13 | Numerical Stability | ✅ | ~45 min |
-| 14 | Norms & Distances | ✅ | ~45 min |
-| 15 | Statistics for ML | ✅ | ~45 min |
-| 16 | Sampling Methods | ✅ | ~75 min |
-| 17 | Linear Systems | ✅ | ~75 min |
-| 18 | Convex Optimization | ✅ | ~75 min |
-| 19 | Complex Numbers for AI | ✅ | ~45 min |
-| 20 | The Fourier Transform | ✅ | ~75 min |
-| 21 | Graph Theory for ML | ✅ | ~45 min |
-| 22 | Stochastic Processes | ✅ | ~45 min |
-
-## Phase 2: ML Fundamentals — ✅ (~21 hours)
+## Phase 1: Math Foundations — 🚧 (~23 hours)
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | What Is Machine Learning — Types & Taxonomy | ✅ | ~45 min |
-| 02 | Linear Regression from Scratch | ✅ | ~75 min |
-| 03 | Logistic Regression & Classification | ✅ | ~75 min |
-| 04 | Decision Trees & Random Forests | ✅ | ~75 min |
-| 05 | Support Vector Machines | ✅ | ~75 min |
-| 06 | K-Nearest Neighbors & Distance Metrics | ✅ | ~75 min |
-| 07 | Unsupervised Learning — K-Means, DBSCAN | ✅ | ~75 min |
-| 08 | Feature Engineering & Selection | ✅ | ~75 min |
-| 09 | Model Evaluation — Metrics, Cross-Validation | ✅ | ~75 min |
-| 10 | Bias, Variance & the Learning Curve | ✅ | ~45 min |
-| 11 | Ensemble Methods — Boosting, Bagging, Stacking | ✅ | ~75 min |
-| 12 | Hyperparameter Tuning & AutoML | ✅ | ~75 min |
-| 13 | ML Pipelines & Experiment Tracking | ✅ | ~75 min |
-| 14 | Naive Bayes — Multinomial, Gaussian, Bernoulli | ✅ | ~75 min |
-| 15 | Time Series Fundamentals | ✅ | ~45 min |
-| 16 | Anomaly Detection | ✅ | ~75 min |
-| 17 | Handling Imbalanced Data | ✅ | ~75 min |
-| 18 | Feature Selection | ✅ | ~75 min |
+| 01 | Linear Algebra Intuition | 🚧 | ~45 min |
+| 02 | Vectors, Matrices & Operations | 🚧 | ~75 min |
+| 03 | Matrix Transformations & Eigenvalues | 🚧 | ~75 min |
+| 04 | Calculus for ML — Derivatives & Gradients | 🚧 | ~45 min |
+| 05 | Chain Rule & Automatic Differentiation | 🚧 | ~75 min |
+| 06 | Probability & Distributions | 🚧 | ~45 min |
+| 07 | Bayes' Theorem & Statistical Thinking | 🚧 | ~75 min |
+| 08 | Optimization — Gradient Descent Family | 🚧 | ~75 min |
+| 09 | Information Theory — Entropy, KL Divergence | 🚧 | ~45 min |
+| 10 | Dimensionality Reduction — PCA, t-SNE, UMAP | 🚧 | ~75 min |
+| 11 | Singular Value Decomposition | 🚧 | ~75 min |
+| 12 | Tensor Operations | 🚧 | ~75 min |
+| 13 | Numerical Stability | 🚧 | ~45 min |
+| 14 | Norms & Distances | 🚧 | ~45 min |
+| 15 | Statistics for ML | 🚧 | ~45 min |
+| 16 | Sampling Methods | 🚧 | ~75 min |
+| 17 | Linear Systems | 🚧 | ~75 min |
+| 18 | Convex Optimization | 🚧 | ~75 min |
+| 19 | Complex Numbers for AI | 🚧 | ~45 min |
+| 20 | The Fourier Transform | 🚧 | ~75 min |
+| 21 | Graph Theory for ML | 🚧 | ~45 min |
+| 22 | Stochastic Processes | 🚧 | ~45 min |
 
-## Phase 3: Deep Learning Core — ✅ (~15 hours)
+## Phase 2: ML Fundamentals — 🚧 (~21 hours)
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | The Perceptron — Where It All Started | ✅ | ~45 min |
-| 02 | Multi-Layer Networks & Forward Pass | ✅ | ~75 min |
-| 03 | Backpropagation from Scratch | ✅ | ~75 min |
-| 04 | Activation Functions — ReLU, Sigmoid, GELU & Why | ✅ | ~45 min |
-| 05 | Loss Functions — MSE, Cross-Entropy, Contrastive | ✅ | ~45 min |
-| 06 | Optimizers — SGD, Momentum, Adam, AdamW | ✅ | ~75 min |
-| 07 | Regularization — Dropout, Weight Decay, BatchNorm | ✅ | ~75 min |
-| 08 | Weight Initialization & Training Stability | ✅ | ~45 min |
-| 09 | Learning Rate Schedules & Warmup | ✅ | ~45 min |
-| 10 | Build Your Own Mini Framework | ✅ | ~120 min |
-| 11 | Introduction to PyTorch | ✅ | ~75 min |
-| 12 | Introduction to JAX | ✅ | ~75 min |
-| 13 | Debugging Neural Networks | ✅ | ~75 min |
+| 01 | What Is Machine Learning — Types & Taxonomy | 🚧 | ~45 min |
+| 02 | Linear Regression from Scratch | 🚧 | ~75 min |
+| 03 | Logistic Regression & Classification | 🚧 | ~75 min |
+| 04 | Decision Trees & Random Forests | 🚧 | ~75 min |
+| 05 | Support Vector Machines | 🚧 | ~75 min |
+| 06 | K-Nearest Neighbors & Distance Metrics | 🚧 | ~75 min |
+| 07 | Unsupervised Learning — K-Means, DBSCAN | 🚧 | ~75 min |
+| 08 | Feature Engineering & Selection | 🚧 | ~75 min |
+| 09 | Model Evaluation — Metrics, Cross-Validation | 🚧 | ~75 min |
+| 10 | Bias, Variance & the Learning Curve | 🚧 | ~45 min |
+| 11 | Ensemble Methods — Boosting, Bagging, Stacking | 🚧 | ~75 min |
+| 12 | Hyperparameter Tuning & AutoML | 🚧 | ~75 min |
+| 13 | ML Pipelines & Experiment Tracking | 🚧 | ~75 min |
+| 14 | Naive Bayes — Multinomial, Gaussian, Bernoulli | 🚧 | ~75 min |
+| 15 | Time Series Fundamentals | 🚧 | ~45 min |
+| 16 | Anomaly Detection | 🚧 | ~75 min |
+| 17 | Handling Imbalanced Data | 🚧 | ~75 min |
+| 18 | Feature Selection | 🚧 | ~75 min |
+
+## Phase 3: Deep Learning Core — 🚧 (~15 hours)
+
+| # | Lesson | Status | Est. |
+|---|--------|--------|------|
+| 01 | The Perceptron — Where It All Started | 🚧 | ~45 min |
+| 02 | Multi-Layer Networks & Forward Pass | 🚧 | ~75 min |
+| 03 | Backpropagation from Scratch | 🚧 | ~75 min |
+| 04 | Activation Functions — ReLU, Sigmoid, GELU & Why | 🚧 | ~45 min |
+| 05 | Loss Functions — MSE, Cross-Entropy, Contrastive | 🚧 | ~45 min |
+| 06 | Optimizers — SGD, Momentum, Adam, AdamW | 🚧 | ~75 min |
+| 07 | Regularization — Dropout, Weight Decay, BatchNorm | 🚧 | ~75 min |
+| 08 | Weight Initialization & Training Stability | 🚧 | ~45 min |
+| 09 | Learning Rate Schedules & Warmup | 🚧 | ~45 min |
+| 10 | Build Your Own Mini Framework | 🚧 | ~120 min |
+| 11 | Introduction to PyTorch | 🚧 | ~75 min |
+| 12 | Introduction to JAX | 🚧 | ~75 min |
+| 13 | Debugging Neural Networks | 🚧 | ~75 min |
 
 ## Phase 4: Computer Vision — ⬚ (~19 hours)
 
@@ -157,7 +157,7 @@ Progress tracking for every phase and lesson.
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
 | 01 | Why Transformers — The Problems with RNNs | ⬚ | ~45 min |
-| 02 | Self-Attention from Scratch | ✅ | ~75 min |
+| 02 | Self-Attention from Scratch | 🚧 | ~75 min |
 | 03 | Multi-Head Attention | ⬚ | ~75 min |
 | 04 | Positional Encoding — Sinusoidal, RoPE, ALiBi | ⬚ | ~45 min |
 | 05 | The Full Transformer — Encoder + Decoder | ⬚ | ~75 min |
@@ -211,38 +211,38 @@ Progress tracking for every phase and lesson.
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | Tokenizers — BPE, WordPiece, SentencePiece | ✅ | ~45 min |
-| 02 | Building a Tokenizer from Scratch | ✅ | ~75 min |
-| 03 | Data Pipelines for Pre-Training | ✅ | ~75 min |
-| 04 | Pre-Training a Mini GPT (124M) | ✅ | ~120 min |
-| 05 | Scaling — Distributed Training, FSDP, DeepSpeed | ✅ | ~75 min |
-| 06 | Instruction Tuning — SFT | ✅ | ~75 min |
-| 07 | RLHF — Reward Model + PPO Training | ✅ | ~75 min |
-| 08 | DPO — Direct Preference Optimization | ✅ | ~75 min |
+| 01 | Tokenizers — BPE, WordPiece, SentencePiece | 🚧 | ~45 min |
+| 02 | Building a Tokenizer from Scratch | 🚧 | ~75 min |
+| 03 | Data Pipelines for Pre-Training | 🚧 | ~75 min |
+| 04 | Pre-Training a Mini GPT (124M) | 🚧 | ~120 min |
+| 05 | Scaling — Distributed Training, FSDP, DeepSpeed | 🚧 | ~75 min |
+| 06 | Instruction Tuning — SFT | 🚧 | ~75 min |
+| 07 | RLHF — Reward Model + PPO Training | 🚧 | ~75 min |
+| 08 | DPO — Direct Preference Optimization | 🚧 | ~75 min |
 | 09 | Constitutional AI & Self-Improvement | ⬚ | ~45 min |
-| 10 | Evaluation — Benchmarks, Evals, LM Harness | ✅ | ~75 min |
-| 11 | Quantization — INT8, GPTQ, AWQ, GGUF | ✅ | ~75 min |
-| 12 | Inference Optimization | ✅ | ~75 min |
+| 10 | Evaluation — Benchmarks, Evals, LM Harness | 🚧 | ~75 min |
+| 11 | Quantization — INT8, GPTQ, AWQ, GGUF | 🚧 | ~75 min |
+| 12 | Inference Optimization | 🚧 | ~75 min |
 | 13 | Building a Complete LLM Pipeline | ⬚ | ~120 min |
 | 14 | Open Models — Architecture Walkthroughs | ⬚ | ~45 min |
 
-## Phase 11: LLM Engineering — ✅ (~15 hours)
+## Phase 11: LLM Engineering — 🚧 (~15 hours)
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | Prompt Engineering — Techniques & Patterns | ✅ | ~45 min |
-| 02 | Few-Shot, Chain-of-Thought, Tree-of-Thought | ✅ | ~45 min |
-| 03 | Structured Outputs | ✅ | ~75 min |
-| 04 | Embeddings & Vector Representations | ✅ | ~75 min |
-| 05 | Context Engineering | ✅ | ~75 min |
-| 06 | RAG — Retrieval-Augmented Generation | ✅ | ~75 min |
-| 07 | Advanced RAG | ✅ | ~75 min |
-| 08 | Fine-Tuning with LoRA & QLoRA | ✅ | ~75 min |
-| 09 | Function Calling & Tool Use | ✅ | ~75 min |
-| 10 | Evaluation & Testing LLM Applications | ✅ | ~45 min |
-| 11 | Caching, Rate Limiting & Cost Optimization | ✅ | ~45 min |
-| 12 | Guardrails, Safety & Content Filtering | ✅ | ~45 min |
-| 13 | Building a Production LLM Application | ✅ | ~120 min |
+| 01 | Prompt Engineering — Techniques & Patterns | 🚧 | ~45 min |
+| 02 | Few-Shot, Chain-of-Thought, Tree-of-Thought | 🚧 | ~45 min |
+| 03 | Structured Outputs | 🚧 | ~75 min |
+| 04 | Embeddings & Vector Representations | 🚧 | ~75 min |
+| 05 | Context Engineering | 🚧 | ~75 min |
+| 06 | RAG — Retrieval-Augmented Generation | 🚧 | ~75 min |
+| 07 | Advanced RAG | 🚧 | ~75 min |
+| 08 | Fine-Tuning with LoRA & QLoRA | 🚧 | ~75 min |
+| 09 | Function Calling & Tool Use | 🚧 | ~75 min |
+| 10 | Evaluation & Testing LLM Applications | 🚧 | ~45 min |
+| 11 | Caching, Rate Limiting & Cost Optimization | 🚧 | ~45 min |
+| 12 | Guardrails, Safety & Content Filtering | 🚧 | ~45 min |
+| 13 | Building a Production LLM Application | 🚧 | ~120 min |
 
 ## Phase 12: Multimodal AI — ⬚ (~11 hours)
 
@@ -279,7 +279,7 @@ Progress tracking for every phase and lesson.
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | The Agent Loop | ✅ | ~45 min |
+| 01 | The Agent Loop | 🚧 | ~45 min |
 | 02 | Tool Dispatch & Registration | ⬚ | ~75 min |
 | 03 | Planning — TodoWrite, DAGs, Goal Decomposition | ⬚ | ~75 min |
 | 04 | Memory — Short-Term, Long-Term, Episodic | ⬚ | ~75 min |
@@ -315,9 +315,9 @@ Progress tracking for every phase and lesson.
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | Why Multi-Agent | ✅ | ~45 min |
+| 01 | Why Multi-Agent | 🚧 | ~45 min |
 | 02 | Agent Teams — Roles, Specialization, Delegation | ⬚ | ~75 min |
-| 03 | Communication Protocols | ✅ | ~45 min |
+| 03 | Communication Protocols | 🚧 | ~45 min |
 | 04 | Shared State & Coordination | ⬚ | ~75 min |
 | 05 | Message Passing & Mailboxes | ⬚ | ~75 min |
 | 06 | Task Markets — Agents Bidding for Work | ⬚ | ~45 min |
@@ -334,9 +334,9 @@ Progress tracking for every phase and lesson.
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | Model Serving | ✅ | ~75 min |
-| 02 | Docker for AI Workloads | ✅ | ~75 min |
-| 03 | Kubernetes for AI | ✅ | ~75 min |
+| 01 | Model Serving | 🚧 | ~75 min |
+| 02 | Docker for AI Workloads | 🚧 | ~75 min |
+| 03 | Kubernetes for AI | 🚧 | ~75 min |
 | 04 | Edge Deployment | ⬚ | ~75 min |
 | 05 | Observability | ⬚ | ~45 min |
 | 06 | Cost Optimization | ⬚ | ~45 min |
