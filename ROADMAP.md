@@ -10,9 +10,9 @@ Progress tracking for every phase and lesson.
 
 | # | Lesson | Status | Est. |
 |---|--------|--------|------|
-| 01 | Dev Environment | 🚧 | ~75 min |
-| 02 | Git & Collaboration | 🚧 | ~45 min |
-| 03 | GPU Setup & Cloud | 🚧 | ~75 min |
+| 01 | Dev Environment | ✅ | ~75 min |
+| 02 | Git & Collaboration | ✅ | ~45 min |
+| 03 | GPU Setup & Cloud | ✅ | ~75 min |
 | 04 | APIs & Keys | 🚧 | ~75 min |
 | 05 | Jupyter Notebooks | 🚧 | ~75 min |
 | 06 | Python Environments | 🚧 | ~75 min |
